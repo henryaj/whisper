@@ -258,7 +258,7 @@ def cli():
     os.makedirs(output_dir, exist_ok=True)
 
     if model_name.endswith(".en") and args["language"] != "en":
-        warnings.warn(f"{model_name} is an English-only model but receipted '{args['language']}'; using English instead.")
+        warnings.warn(f"{model_name} is an English-only model but received '{args['language']}'; using English instead.")
         args["language"] = "en"
 
     temperature_increment_on_fallback = args.pop("temperature_increment_on_fallback")
